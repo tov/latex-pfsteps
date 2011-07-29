@@ -1,0 +1,26 @@
+The pfsteps Package
+
+To build the PDF documentation and style file, merely run
+
+    % make
+
+If you don't have make, it's possible to do it manually.  To create the
+style file (pfsteps.sty) and the documentation (pfsteps.pdf), run the
+following sequence of commands:
+
+    latex pfsteps.ins
+    latex pfsteps.dtx
+    makeindex -s gind.ist pfsteps.idx
+    makeindex -s gglo.ist -o pfsteps.gls pfsteps.glo
+    latex pfsteps.dtx
+    pdflatex pfsteps.dtx
+
+If you only want to build the style file, and not the documentation,
+only the first command (latex pfsteps.ins) is necessary.
+
+The documentation is also available on the web at
+http://www.ccs.neu.edu/home/tov/code/latex/
+
+Jesse A. Tov
+tov@ccs.neu.edu
+Fri Jul 29 15:41:15 EDT 2011
