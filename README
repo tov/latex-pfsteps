@@ -1,26 +1,41 @@
 The pfsteps Package
 
-To build the PDF documentation and style file, merely run
+SYNOPSIS
 
-    % make
+    This package provides three facilities for making it easier to write
+    proofs in LaTeX:
 
-If you don't have make, it's possible to do it manually.  To create the
-style file (pfsteps.sty) and the documentation (pfsteps.pdf), run the
-following sequence of commands:
+      1) proof step counters and references, inspired by Rémy’s
+         locallabel package, but with a different interface;
 
-    latex pfsteps.ins
-    latex pfsteps.dtx
-    makeindex -s gind.ist pfsteps.idx
-    makeindex -s gglo.ist -o pfsteps.gls pfsteps.glo
-    latex pfsteps.dtx
-    pdflatex pfsteps.dtx
+      2) a proof display environment pfsteps for printing line-by-line
+         proofs with justifications; and
 
-If you only want to build the style file, and not the documentation,
-only the first command (latex pfsteps.ins) is necessary.
+      3) the byCases environment for proofs by cases.
 
-The documentation is also available on the web at
-http://www.ccs.neu.edu/home/tov/code/latex/
+BUILDING
+
+    To build the PDF documentation and style file, merely run
+
+        % make
+
+    If you don't have make, it's possible to do it manually.  To create
+    the style file (pfsteps.sty) and the documentation (pfsteps.pdf),
+    run the following sequence of commands:
+
+        latex pfsteps.ins
+        latex pfsteps.dtx
+        makeindex -s gind.ist pfsteps.idx
+        makeindex -s gglo.ist -o pfsteps.gls pfsteps.glo
+        latex pfsteps.dtx
+        pdflatex pfsteps.dtx
+
+    If you only want to build the style file, and not the documentation,
+    only the first command (latex pfsteps.ins) is necessary.
+
+    The documentation is also available on the web at
+    http://www.ccs.neu.edu/home/tov/code/latex/
 
 Jesse A. Tov
 tov@ccs.neu.edu
-Fri Jul 29 15:41:15 EDT 2011
+Fri, 29 Jul 2011 15:50:02 -0400
